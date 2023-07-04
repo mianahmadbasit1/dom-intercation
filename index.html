@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="ahmad(); return false;">
+      <label for="tm">Total Marks</label>
+      <input type="number" name="tm" id="stdtm" />
+      <br />
+      <label for="om">Obtain Marks</label>
+      <input type="number" name="om" id="stdom" />
+      <br />
+      <button type="submit" onclick="alert1()">Calculate</button>
+    </form>
+    <h1 id="show"></h1>
+    <script>
+      function ahmad() {
+        let stdTotal_Marks = document.querySelector("#stdtm").value;
+        let stdobt_Marks = document.querySelector("#stdom").value;
+        let res = (stdobt_Marks / stdTotal_Marks) * 100;
+        document.querySelector("#show").innerHTML =
+          "you have got it " + res + "%";
+      }
+      function alert1() {
+        alert("hi");
+      }
+    </script>
+  </body>
+</html>
